@@ -9,4 +9,4 @@ Click a button to generate a password that is 8-128 characters in length with lo
 //SCREENSHOT HERE//
 
 
- This project helped me further understand javascript coding and how it allows for user inteaction with the browser.  
+ This project helped me further understand javascript coding and how it allows for user interaction with the browser.  
