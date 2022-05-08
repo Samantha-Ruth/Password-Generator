@@ -1,6 +1,11 @@
 
 
 passwordArray = [];
+passwordArrayUpper = [];
+passwordArrayLower = [];
+passwordArrayNumbers = [];
+passwordArrayCharacters = [];
+
 
 // //Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -60,7 +65,6 @@ function writePassword() {
             passwordArray = passwordArray.concat(characters);
         }
         // NEED TO CREATE A CONFIRM - WHAT THEY PUT IN THEIR PASsWORD ***
-        /// SOMETHING WONKY IS MAKING CAPITAL LETTERS BE INCLUDED IN LOWERCASE. 
         console.log(lengthOfPassword);
         console.log(passwordArray);
         console.log(upperCase);
@@ -69,28 +73,6 @@ function writePassword() {
         console.log(characters);
     }
     generate ();
-
-    function getRandom(max) {
-      var random = Math.floor(Math.random()* max);
-      return random;
-    // var random = Math.random() * max;
-    // return Math.floor(random) + 1;
-    }
-
-    const index = getRandom(array.length)-1;
-    console.log(passwordArray[index]);
-  
-    function create () {
-      var password = [];
-        for(var i = 0; i < lengthOfPassword; i++) {
-          var random = getRandom(94)
-          password.push(random)
-        }
-      return password;
-    }
-  console.log(create());    
-  
-  randomInteger();
 
  var password = generatePassword();
  var passwordText = document.querySelector("#password");

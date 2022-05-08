@@ -1,3 +1,5 @@
+
+// Functions to create password criteria
 // Create Uppercase Array
 const alpha = Array.from(Array(26)).map((e, i) => i + 65);
 const capitalLetters = alpha.map((x) => String.fromCharCode(x));
