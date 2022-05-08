@@ -12,5 +12,7 @@ Click a button to generate a password that is 8-128 characters in length with lo
 
  This project helped me further understand javascript coding and how it allows for user interaction with the browser.  I explored playing with window prompts/alerts/confirms, entering functions, math.ramdom, for-loops, pushing and concatenating arrays to new arrays, and local and global variables among other javascript items.    
 
-link to gitHub repository: https://github.com/Samantha-Ruth/Password-Generator
+link to gitHub repository: https://github.com/Samantha-Ruth/Password-Generator/
+
+
 link to active url: https://samantha-ruth.github.io/Password-Generator/
