@@ -75,11 +75,13 @@ var passwordRandom = [];
     var random = getRandomCharacter();
     passwordRandom.push(random);
   }
-  // Need to remove commas from array - stringify? 
   console.log(passwordRandom);
-  return passwordRandom;
+    var passwordFinal = passwordRandom.join("");
+
+
+  return passwordFinal;
 }
 
 generateBtn.addEventListener("click", writePassword);
 
-// need to remove console.logs
+// need to remove console.logs`
