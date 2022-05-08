@@ -1,5 +1,3 @@
-
-// //Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 //Write password to the #password input
@@ -9,16 +7,17 @@ function writePassword() {
   passwordText.value = password;
   }
 
+// create Password
 function generatePassword() {
 passwordArray = [];
 var passwordRandom = [];
-  // Create prompts
-  window.alert("Welcome to Password Generator! Please select some criteria for your new, awesome password!");
+  // create prompts
   var lengthOfPassword = prompt("Choose length of 8-128 characters.");
     if (lengthOfPassword === "" || lengthOfPassword=== null) {
     window.alert("You need to provide a valid answer! Please try again.");
     return generatePassword();
     }
+    // create a window alert if user doesn't enter a number
     n = parseInt(lengthOfPassword);
     if (isNaN(n)) {
       alert("You must enter a numerical value.");
@@ -28,7 +27,6 @@ var passwordRandom = [];
       window.alert("Password must be between 8 to 128 characters.");
       return generatePassword();
     }  
-  /// NEED TO SET UP A CONDITION IF PEOPLE ENTER LETTERS INSTEAD OF NUMBERS! // 
   var upperCase = confirm("Click 'OK' if you'd like to include uppercase letters. If you don't want to include uppercase letters, click Cancel.");
     // if user requests upperCase letters, add to passwordArray
     if (upperCase) {
@@ -84,32 +82,26 @@ var passwordRandom = [];
     else if (!characters) {
       var alertCharacters = "";
     }
-
-
-    window.alert("You have chosen to include the following in your password:\n\n" + alertUpperCase + alertLowerCase + alertIntegers + alertCharacters);  
-
-
-
+  // create an alert if no characters are chosen.
   if (!characters && !integers && !lowerCase && !upperCase) {
     window.alert("You must include at least one character type.");
     return generatePassword();
     }
-  //NEED TO CREATE A CONFIRM - WHAT THEY PUT IN THEIR PASsWORD ***
-  console.log(lengthOfPassword);
-  console.log(passwordArray);
+  // create an alert that validates the users responses.
+  window.alert("You have chosen to include the following in your password:\n\n" + alertUpperCase + alertLowerCase + alertIntegers + alertCharacters);  
+  // math random function
   function getRandomCharacter() {
     const randomCharacter = passwordArray[Math.floor(Math.random() * passwordArray.length)];
     return randomCharacter;
   }
+  // loop of math random to create an array
   for (var i = 0; i < lengthOfPassword; i++) {
     var random = getRandomCharacter();
     passwordRandom.push(random);
   }
-  console.log(passwordRandom);
+  // remove commas and return password result
     var passwordFinal = passwordRandom.join("");
   return passwordFinal;
 }
 
 generateBtn.addEventListener("click", writePassword);
-
-// need to remove console.logs`
