@@ -19,24 +19,32 @@ var passwordRandom = [];
     window.alert("You need to provide a valid answer! Please try again.");
     return generatePassword();
     }
+    n = parseInt(lengthOfPassword);
+    if (isNaN(n)) {
+      alert("You must enter a numerical value.");
+      return generatePassword();
+    } 
     if (lengthOfPassword < 8 || lengthOfPassword >128) {
       window.alert("Password must be between 8 to 128 characters.");
       return generatePassword();
-    }   
+    }  
   /// NEED TO SET UP A CONDITION IF PEOPLE ENTER LETTERS INSTEAD OF NUMBERS! // 
   var upperCase = confirm("Click okay if you'd like to include upper case letters. If you don't want to include caps, click cancel.");
+    // if user requests upperCase letters, add to passwordArray
     if (upperCase) {
       const alpha = Array.from(Array(26)).map((e, i) => i + 65);
       const capitalLetters = alpha.map((x) => String.fromCharCode(x));
       passwordArray = passwordArray.concat(capitalLetters);
     }
   var lowerCase = confirm("Click Okay if you'd like to include lower case letters.");
+    // if user requests lowerCase letters, add to passwordArray
     if (lowerCase) {
       const alpha2 = Array.from(Array(26)).map((e, i) => i + 97);
       const smallLetters = alpha2.map((x) => String.fromCharCode(x));
       passwordArray = passwordArray.concat(smallLetters);
     }
   var integers = confirm("Click Okay if you'd like to include integers.");
+    // if user requests integers, add to passwordArray
     if (integers) {
       const numbers = Array.from(Array(10)).map((e, i) => i + 48);
       const integers = numbers.map((x) => String.fromCharCode(x));
@@ -61,7 +69,7 @@ var passwordRandom = [];
       const fourthCharacters = character4.map((x) => String.fromCharCode(x));
       // add all together
       const characters = firstCharacters.concat( secondCharacters,thirdCharacters,fourthCharacters);
-      // add to passwordArray
+      // if user requests characters, add all characters to passwordArray
       passwordArray = passwordArray.concat(characters);
     }
   // NEED TO CREATE A CONFIRM - WHAT THEY PUT IN THEIR PASsWORD ***
@@ -77,8 +85,6 @@ var passwordRandom = [];
   }
   console.log(passwordRandom);
     var passwordFinal = passwordRandom.join("");
-
-
   return passwordFinal;
 }
 
