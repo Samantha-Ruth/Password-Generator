@@ -84,9 +84,12 @@ function writePassword() {
       return passwordRandom;
     }
     generate();
+    return generatePassword;
   }
-  // write to page outside of generatePassword function 
 
+  
+  // write to page outside of generatePassword function 
+  // variables that come out of generate password that contain password: var = passwordRandom
  var password = generatePassword();
  var passwordText = document.querySelector("#password");
  passwordText.value = password;
